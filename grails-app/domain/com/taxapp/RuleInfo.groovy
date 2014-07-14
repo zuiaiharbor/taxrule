@@ -13,7 +13,7 @@ class RuleInfo {
 	
     static constraints = {
 		title(blank: false)
-		content(blank: false, maxSize: 40960)
+		content(blank: false)
 		dateCreated()
 		imageData(nullable:true)
     }

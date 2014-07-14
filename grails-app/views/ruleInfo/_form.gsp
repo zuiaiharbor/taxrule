@@ -1,6 +1,6 @@
 <%@ page import="com.taxapp.RuleInfo" %>
 
-
+<resource:richTextEditor type="full" /> 
 
 <div class="fieldcontain ${hasErrors(bean: ruleInfoInstance, field: 'title', 'error')} required">
 	<label for="title">
@@ -8,14 +8,6 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="title" required="" value="${ruleInfoInstance?.title}"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: ruleInfoInstance, field: 'content', 'error')} required">
-	<label for="content">
-		<g:message code="ruleInfo.content.label" default="Content" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textArea name="content" cols="40" rows="5" maxlength="40960" required="" value="${ruleInfoInstance?.content}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: ruleInfoInstance, field: 'imageData', 'error')} ">
@@ -32,5 +24,14 @@
 		
 	</label>
 	<g:textField name="year" value="${ruleInfoInstance?.year}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: ruleInfoInstance, field: 'content', 'error')} required">
+	<label for="content">
+		<g:message code="ruleInfo.content.label" default="Content" />
+		<span class="required-indicator">*</span>
+	</label>
+<%--	<g:textField name="content" required="" value="${ruleInfoInstance?.content}"/>--%>
+	<richui:richTextEditor name="content" value="${ruleInfoInstance?.content}" width="200" height="500" />
 </div>
 

@@ -6,6 +6,7 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'ruleInfo.label', default: 'RuleInfo')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
+		<resource:richTextEditor type="simple" />
 	</head>
 	<body>
 		<a href="#show-ruleInfo" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -35,9 +36,9 @@
 				<g:if test="${ruleInfoInstance?.content}">
 				<li class="fieldcontain">
 					<span id="content-label" class="property-label"><g:message code="ruleInfo.content.label" default="Content" /></span>
-					
-						<span class="property-value" aria-labelledby="content-label"><g:fieldValue bean="${ruleInfoInstance}" field="content"/></span>
-					
+<%--						<span class="property-value" aria-labelledby="content-label"><g:fieldValue bean="${ruleInfoInstance}" field="content"/></span>--%>
+<%--					<richui:richTextEditor name="content" value="${ruleInfoInstance?.content}" width="300" height="400" />--%>
+					<richui:richTextEditor name="content" value="${fieldValue(bean:ruleInfoInstance,field:'content').decodeHTML()}" width="200" height="600"/>
 				</li>
 				</g:if>
 			
