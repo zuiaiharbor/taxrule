@@ -94,3 +94,9 @@ log4j = {
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.taxapp.User'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.taxapp.UserRole'
 grails.plugins.springsecurity.authority.className = 'com.taxapp.Role'
+
+//grails.plugins.springsecurity.password.algorithm='bcrypt'
+grails.plugins.springsecurity.logout.postOnly= false
+grails.plugins.springsecurity.logout.afterLogoutUrl = "http://localhost:8080/taxrule/login/auth"
+grails.plugins.springsecurity.rejectIfNoRule = true
+grails.plugins.springsecurity.fii.rejectPublicInvocations = false
