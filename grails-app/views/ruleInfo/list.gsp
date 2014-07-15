@@ -30,7 +30,7 @@
 					
 						<g:sortableColumn property="dateCreated" title="${message(code: 'ruleInfo.dateCreated.label', default: 'Date Created')}" />
 					
-						<g:sortableColumn property="imageData" title="${message(code: 'ruleInfo.imageData.label', default: 'Image Data')}" />
+<%--						<g:sortableColumn property="imageData" title="${message(code: 'ruleInfo.imageData.label', default: 'Image Data')}" />--%>
 					
 						<g:sortableColumn property="lastUpdated" title="${message(code: 'ruleInfo.lastUpdated.label', default: 'Last Updated')}" />
 					
@@ -48,7 +48,7 @@
 					
 						<td><g:formatDate date="${ruleInfoInstance.dateCreated}" format="yyyy-MM-dd"/></td>
 					
-						<td>${fieldValue(bean: ruleInfoInstance, field: "imageData")}</td>
+<%--						<td>${fieldValue(bean: ruleInfoInstance, field: "imageData")}</td>--%>
 					
 						<td><g:formatDate date="${ruleInfoInstance.lastUpdated}" format="yyyy-MM-dd"/></td>
 					

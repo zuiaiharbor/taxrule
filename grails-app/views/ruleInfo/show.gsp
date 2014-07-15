@@ -38,7 +38,7 @@
 					<span id="content-label" class="property-label"><g:message code="ruleInfo.content.label" default="Content" /></span>
 <%--						<span class="property-value" aria-labelledby="content-label"><g:fieldValue bean="${ruleInfoInstance}" field="content"/></span>--%>
 <%--					<richui:richTextEditor name="content" value="${ruleInfoInstance?.content}" width="300" height="400" />--%>
-					<richui:richTextEditor name="content" value="${fieldValue(bean:ruleInfoInstance,field:'content').decodeHTML()}" width="200" height="600"/>
+					<richui:richTextEditor name="content" value="${fieldValue(bean:ruleInfoInstance,field:'content').decodeHTML()}" width="200" height="400"/>
 				</li>
 				</g:if>
 			
